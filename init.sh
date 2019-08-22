@@ -3,7 +3,7 @@ echo 'Start Backend'
 cd Backend
 source ./execute.sh &
 
-sleep 1s
+sleep 3s
 
 echo 'Start Frontend'
 cd ../Frontend
