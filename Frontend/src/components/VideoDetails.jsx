@@ -50,7 +50,7 @@ const VideoDetails = (props) => {
         }
     };
     if (props.fetchVideos.length<=0) {
-        return <div>Loading...</div>
+        return <div>Please add videos to the playlist.</div>
     }
     // const url = `https://www.youtube.com/embed/${video.id}?autoplay=1`;
     // const title = video.snippet.title;

@@ -15,10 +15,10 @@ function App(props) {
            props.addVideoToList(video);
         })
     };
-
+const {fetchVideos} =props;
     useEffect(() => {
         (async () => {
-            await props.fetchVideos();
+            await fetchVideos();
         })();
     }, []);
 
@@ -26,7 +26,7 @@ function App(props) {
         <Grid container direction={'column'}>
             <Grid item>
                 <SearchBar searchVideo={searchVideo}/>
-                <Grid container direction={'row'} alignItems={"center"} justify={"space-around"}>
+                <Grid container direction={'row'} alignItems={"flex-start"} justify={"space-around"}>
                     <VideoList/>
                     <VideoDetails />
                 </Grid>

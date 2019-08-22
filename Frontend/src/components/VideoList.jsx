@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import VideoListItem from "./VideoListItem";
 import {connect} from 'react-redux';
+import Paper from "@material-ui/core/Paper";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -29,12 +30,12 @@ const VideoList = ({videos}) => {
                 <Typography variant="h6" className={classes.title}>
                     Videos
                 </Typography>
-                <div className={classes.demo}>
+                <Paper className={classes.demo} style={{height:250,maxHeight: 250, overflow: 'auto'}}>
                     <List dense={true}>
                         {videos.map(video => <VideoListItem key={video.etag} video={video} />,
                         )}
                     </List>
-                </div>
+                </Paper>
             </Grid>
     );
 };
